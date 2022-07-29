@@ -18,7 +18,7 @@ struct MusicView: View {
         VStack {
             music.image
                 .resizable()
-                .frame(width: 300, height: 300)
+                .frame(width: 400, height: 400)
                 .padding()
                 .clipShape(RoundedRectangle(cornerRadius: 4))
                 .transition(.opacity)

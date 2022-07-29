@@ -5,20 +5,39 @@
         "title": "Keanu Reeves",
         "fileName": "logic_keanu_reeves",
         "artist": "Logic",
-        "imageName": "logic_keanu_reeves"
+        "imageName": "logic_keanu_reeves",
+        
     },
     {
         "id": 2,
         "title": "White Iverson",
         "fileName": "postmalone_white_iverson",
         "artist": "Post Malone",
-        "imageName": "postmalone_white_iverson"
+        "imageName": "postmalone_white_iverson",
+        
     },
     {
         "id": 3,
         "title": "Flash Back",
         "fileName": "mcgoku_flashback",
         "artist": "MC GOKU",
-        "imageName": "mcgoku_flashback"
+        "imageName": "mcgoku_flashback",
+        
     },
+    {
+        "id": 4,
+        "title": "Drip",
+        "fileName": "cardib_drip",
+        "artist": "Cardi B feat. Migos",
+        "imageName": "cardib_drip",
+        
+    },
+    {
+        "id": 5,
+        "title": "Rockstar",
+        "fileName": "dababy_rockstar",
+        "artist": "DaBaby feat. Roddy Rich",
+        "imageName": "dababy_rockstar",
+        
+    }
 ]
