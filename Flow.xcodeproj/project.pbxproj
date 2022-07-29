@@ -11,6 +11,16 @@
 		5580175D28938D01003D29F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580175C28938D01003D29F2 /* ContentView.swift */; };
 		5580175F28938D07003D29F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5580175E28938D07003D29F2 /* Assets.xcassets */; };
 		5580176228938D07003D29F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5580176128938D07003D29F2 /* Preview Assets.xcassets */; };
+		5580176C28938EF2003D29F2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580176B28938EF2003D29F2 /* SearchView.swift */; };
+		5580176E28938F31003D29F2 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580176D28938F31003D29F2 /* MusicView.swift */; };
+		5580177028938F3A003D29F2 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580176F28938F3A003D29F2 /* AboutView.swift */; };
+		558017722893914A003D29F2 /* MusicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558017712893914A003D29F2 /* MusicRow.swift */; };
+		55801774289391A1003D29F2 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55801773289391A0003D29F2 /* Music.swift */; };
+		5580177628939243003D29F2 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580177528939243003D29F2 /* DataHandler.swift */; };
+		558017782893929C003D29F2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 558017772893929C003D29F2 /* data.json */; };
+		5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */; };
+		5580177C28939529003D29F2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580177B28939529003D29F2 /* Player.swift */; };
+		5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		5580175C28938D01003D29F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5580175E28938D07003D29F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5580176128938D07003D29F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5580176B28938EF2003D29F2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5580176D28938F31003D29F2 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
+		5580176F28938F3A003D29F2 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		558017712893914A003D29F2 /* MusicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRow.swift; sourceTree = "<group>"; };
+		55801773289391A0003D29F2 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		5580177528939243003D29F2 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		558017772893929C003D29F2 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = logic_keanu_reeves.mp3; sourceTree = "<group>"; };
+		5580177B28939529003D29F2 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logic_keanu_reeves.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +71,14 @@
 		5580175928938D01003D29F2 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				5580176A28938D97003D29F2 /* assets */,
+				5580176928938D89003D29F2 /* models */,
+				5580176828938D84003D29F2 /* views */,
 				5580175A28938D01003D29F2 /* FlowApp.swift */,
 				5580175C28938D01003D29F2 /* ContentView.swift */,
 				5580175E28938D07003D29F2 /* Assets.xcassets */,
 				5580176028938D07003D29F2 /* Preview Content */,
+				558017772893929C003D29F2 /* data.json */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -65,6 +89,36 @@
 				5580176128938D07003D29F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5580176828938D84003D29F2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5580176B28938EF2003D29F2 /* SearchView.swift */,
+				558017712893914A003D29F2 /* MusicRow.swift */,
+				5580176D28938F31003D29F2 /* MusicView.swift */,
+				5580177B28939529003D29F2 /* Player.swift */,
+				5580176F28938F3A003D29F2 /* AboutView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5580176928938D89003D29F2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				55801773289391A0003D29F2 /* Music.swift */,
+				5580177528939243003D29F2 /* DataHandler.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5580176A28938D97003D29F2 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */,
+				558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5580176228938D07003D29F2 /* Preview Assets.xcassets in Resources */,
+				558017782893929C003D29F2 /* data.json in Resources */,
 				5580175F28938D07003D29F2 /* Assets.xcassets in Resources */,
+				5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */,
+				5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558017722893914A003D29F2 /* MusicRow.swift in Sources */,
 				5580175D28938D01003D29F2 /* ContentView.swift in Sources */,
+				5580176C28938EF2003D29F2 /* SearchView.swift in Sources */,
+				5580176E28938F31003D29F2 /* MusicView.swift in Sources */,
+				5580177628939243003D29F2 /* DataHandler.swift in Sources */,
+				55801774289391A1003D29F2 /* Music.swift in Sources */,
 				5580175B28938D01003D29F2 /* FlowApp.swift in Sources */,
+				5580177C28939529003D29F2 /* Player.swift in Sources */,
+				5580177028938F3A003D29F2 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

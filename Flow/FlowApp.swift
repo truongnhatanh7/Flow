@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FlowApp: App {
+    @StateObject private var data = DataHandler()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(data)
         }
     }
 }
