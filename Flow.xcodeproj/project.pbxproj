@@ -23,6 +23,8 @@
 		5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */; };
 		558017802893AD41003D29F2 /* postmalone_white_iverson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */; };
 		558017822893ADA7003D29F2 /* postmalone_white_iverson.png in Resources */ = {isa = PBXBuildFile; fileRef = 558017812893ADA7003D29F2 /* postmalone_white_iverson.png */; };
+		55801785289436BF003D29F2 /* mcgoku_flashback.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55801784289436BF003D29F2 /* mcgoku_flashback.mp3 */; };
+		558017872894371D003D29F2 /* mcgoku_flashback.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 558017862894371D003D29F2 /* mcgoku_flashback.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = postmalone_white_iverson.mp3; sourceTree = "<group>"; };
 		558017812893ADA7003D29F2 /* postmalone_white_iverson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postmalone_white_iverson.png; sourceTree = "<group>"; };
 		558017832893B6F9003D29F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		55801784289436BF003D29F2 /* mcgoku_flashback.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mcgoku_flashback.mp3; sourceTree = "<group>"; };
+		558017862894371D003D29F2 /* mcgoku_flashback.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mcgoku_flashback.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +125,10 @@
 		5580176A28938D97003D29F2 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				558017862894371D003D29F2 /* mcgoku_flashback.jpeg */,
 				558017812893ADA7003D29F2 /* postmalone_white_iverson.png */,
 				5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */,
+				55801784289436BF003D29F2 /* mcgoku_flashback.mp3 */,
 				5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */,
 				558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */,
 			);
@@ -187,12 +193,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55801785289436BF003D29F2 /* mcgoku_flashback.mp3 in Resources */,
 				558017802893AD41003D29F2 /* postmalone_white_iverson.mp3 in Resources */,
 				5580176228938D07003D29F2 /* Preview Assets.xcassets in Resources */,
 				558017782893929C003D29F2 /* data.json in Resources */,
 				5580175F28938D07003D29F2 /* Assets.xcassets in Resources */,
 				5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */,
 				5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */,
+				558017872894371D003D29F2 /* mcgoku_flashback.jpeg in Resources */,
 				558017822893ADA7003D29F2 /* postmalone_white_iverson.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
