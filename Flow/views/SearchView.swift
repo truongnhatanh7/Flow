@@ -15,17 +15,21 @@ struct SearchView: View {
             List {
                 ForEach(searchResults, id: \.self) { music in
                     NavigationLink {
-                        MusicView()
+                        MusicView(music: music)
                     } label: {
                         MusicRow(music: music);
                     }
                 }
+                .listRowSeparator(.hidden)
             }
-            .navigationTitle("Search")
             .searchable(text: $searchText)
+            .navigationTitle("Search")
+        
             Spacer()
             Player()
         }
+       
+
 
 
     }

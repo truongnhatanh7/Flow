@@ -7,10 +7,12 @@
 
 import Foundation
 import Combine
+import AVKit
 
 final class DataHandler: ObservableObject {
     @Published var musics: [Music] = load("data.json")
-    @Published var currentSong: String = "logic_keanu_reeves"
+    @Published var audioPlayer: AVAudioPlayer!
+    @Published var selectedMusic: Music?
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

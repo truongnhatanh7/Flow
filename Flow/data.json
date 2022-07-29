@@ -6,5 +6,12 @@
         "fileName": "logic_keanu_reeves",
         "artist": "Logic",
         "imageName": "logic_keanu_reeves"
-    }
+    },
+    {
+        "id": 2,
+        "title": "White Iverson",
+        "fileName": "postmalone_white_iverson",
+        "artist": "Post Malone",
+        "imageName": "postmalone_white_iverson"
+    },
 ]

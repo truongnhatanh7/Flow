@@ -8,18 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var data: DataHandler
     var body: some View {
+//        NavigationView {
+//            TabView {
+//                SearchView()
+//                    .tabItem {
+//                        Image(systemName: "magnifyingglass")
+//                        Text("Search")
+//                    }
+//                MusicView(music: data.musics[0])
+//                    .tabItem {
+//                        Image(systemName: "music.note")
+//                        Text("Now")
+//                    }
+//                AboutView()
+//                    .tabItem {
+//                        Image(systemName: "face.smilling")
+//                        Text("About")
+//                    }
+//            }
+//        }
+//        .environmentObject(DataHandler())
         NavigationView {
-            TabView {
-                SearchView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-            }
+            SearchView()
         }
-        .navigationTitle("Search")
-        .environmentObject(DataHandler())
+        .environmentObject(data)
 
     }
 }

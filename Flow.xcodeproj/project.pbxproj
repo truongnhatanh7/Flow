@@ -21,6 +21,8 @@
 		5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */; };
 		5580177C28939529003D29F2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580177B28939529003D29F2 /* Player.swift */; };
 		5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */; };
+		558017802893AD41003D29F2 /* postmalone_white_iverson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */; };
+		558017822893ADA7003D29F2 /* postmalone_white_iverson.png in Resources */ = {isa = PBXBuildFile; fileRef = 558017812893ADA7003D29F2 /* postmalone_white_iverson.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = logic_keanu_reeves.mp3; sourceTree = "<group>"; };
 		5580177B28939529003D29F2 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logic_keanu_reeves.jpeg; sourceTree = "<group>"; };
+		5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = postmalone_white_iverson.mp3; sourceTree = "<group>"; };
+		558017812893ADA7003D29F2 /* postmalone_white_iverson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postmalone_white_iverson.png; sourceTree = "<group>"; };
+		558017832893B6F9003D29F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 		5580175928938D01003D29F2 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				558017832893B6F9003D29F2 /* Info.plist */,
 				5580176A28938D97003D29F2 /* assets */,
 				5580176928938D89003D29F2 /* models */,
 				5580176828938D84003D29F2 /* views */,
@@ -115,7 +121,9 @@
 		5580176A28938D97003D29F2 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				558017812893ADA7003D29F2 /* postmalone_white_iverson.png */,
 				5580177D289395B6003D29F2 /* logic_keanu_reeves.jpeg */,
+				5580177F2893AD41003D29F2 /* postmalone_white_iverson.mp3 */,
 				558017792893943B003D29F2 /* logic_keanu_reeves.mp3 */,
 			);
 			path = assets;
@@ -179,11 +187,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558017802893AD41003D29F2 /* postmalone_white_iverson.mp3 in Resources */,
 				5580176228938D07003D29F2 /* Preview Assets.xcassets in Resources */,
 				558017782893929C003D29F2 /* data.json in Resources */,
 				5580175F28938D07003D29F2 /* Assets.xcassets in Resources */,
 				5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */,
 				5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */,
+				558017822893ADA7003D29F2 /* postmalone_white_iverson.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +344,7 @@
 				DEVELOPMENT_TEAM = PW97DDS2VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -363,6 +374,7 @@
 				DEVELOPMENT_TEAM = PW97DDS2VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

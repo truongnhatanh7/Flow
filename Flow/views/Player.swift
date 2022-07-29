@@ -9,35 +9,51 @@ import SwiftUI
 import AVKit
 
 struct Player: View {
-    @State var audioPlayer: AVAudioPlayer!
+    @EnvironmentObject var data: DataHandler
+    @State var music: Music?
     
     var body: some View {
         HStack {
-            Image("logic_keanu_reeves")
+            data.selectedMusic?.image
                 .resizable()
                 .frame(width: 50, height: 50)
+            VStack(alignment: .leading) {
+                data.selectedMusic == nil ?
+                Text("No playing")
+                    .font(.title)
+                    .foregroundColor(.white) : (
+                        Text("\(data.selectedMusic!.title)")
+                    .font(.title)
+                    .foregroundColor(.white)
+                )
+            }.padding(.leading, 2)
             Spacer()
             Button {
-                self.audioPlayer.play()
+                data.audioPlayer?.play()
             } label: {
                 Image(systemName: "play.fill")
+            
             }
+            .padding()
+            .background(.gray)
+            .foregroundColor(.white)
+            .clipShape(Circle())
             
             
             Button {
-                self.audioPlayer.pause()
+                data.audioPlayer?.pause()
             } label: {
                 Image(systemName: "pause.fill")
             }
-
-
-            
-        }
-        .onAppear {
-            let sound = Bundle.main.path(forResource: "logic_keanu_reeves", ofType: "mp3")
-            self.audioPlayer =  try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            .padding()
+            .background(.gray)
+            .clipShape(Circle())
+            .foregroundColor(.white)
+            .padding(.leading, 4)
         }
         .padding()
+        .background(Color("MyDark"))
+
     }
 
         
@@ -45,6 +61,6 @@ struct Player: View {
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        Player()
+        Player(music: DataHandler().musics[0])
     }
 }
