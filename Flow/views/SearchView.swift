@@ -19,6 +19,9 @@ struct SearchView: View {
                     } label: {
                         MusicRow(music: music);
                     }
+                    .onDisappear {
+                        data.selectedMusic = music
+                    }
                 }
                 .listRowSeparator(.hidden)
             }
@@ -26,7 +29,7 @@ struct SearchView: View {
             .navigationTitle("Search")
         
             Spacer()
-            Player()
+            Player(parent: "SearchView")
         }
        
 

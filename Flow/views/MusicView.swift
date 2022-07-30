@@ -20,8 +20,6 @@ struct MusicView: View {
                 .resizable()
                 .frame(width: 360, height: 360)
                 .padding()
-                .clipShape(RoundedRectangle(cornerRadius: 4))
-                .transition(.opacity)
 
             Text("\(music.title)")
                 .font(.title)
@@ -29,19 +27,17 @@ struct MusicView: View {
             Text("\(music.artist)")
                 .font(.subheadline)
             Spacer()
-            Player(music: music)
+            Player(music: music, parent: "MusicView")
+                
         }
         .onAppear {
+//            data.selectedMusic = music;
+            if music != data.selectedMusic{
+                let sound = Bundle.main.path(forResource: "\(music.fileName)", ofType: "mp3")
+                data.audioPlayer =  try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                data.audioPlayer.play();
+            }
 
-            data.selectedMusic = music;
-            let sound = Bundle.main.path(forResource: "\(music.fileName)", ofType: "mp3")
-            data.audioPlayer =  try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-            data.audioPlayer.play();
-                
-
-            
-
-            
         }
         .navigationTitle("Listen")
     }

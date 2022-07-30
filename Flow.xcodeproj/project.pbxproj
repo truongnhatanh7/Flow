@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5557D36D289504020077EEE1 /* TimeDurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557D36C289504020077EEE1 /* TimeDurationHelper.swift */; };
 		5580175B28938D01003D29F2 /* FlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580175A28938D01003D29F2 /* FlowApp.swift */; };
 		5580175D28938D01003D29F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580175C28938D01003D29F2 /* ContentView.swift */; };
 		5580175F28938D07003D29F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5580175E28938D07003D29F2 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5557D36C289504020077EEE1 /* TimeDurationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDurationHelper.swift; sourceTree = "<group>"; };
 		5580175728938D01003D29F2 /* Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5580175A28938D01003D29F2 /* FlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowApp.swift; sourceTree = "<group>"; };
 		5580175C28938D01003D29F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				55801773289391A0003D29F2 /* Music.swift */,
 				5580177528939243003D29F2 /* DataHandler.swift */,
+				5557D36C289504020077EEE1 /* TimeDurationHelper.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				558017722893914A003D29F2 /* MusicRow.swift in Sources */,
 				5580175D28938D01003D29F2 /* ContentView.swift in Sources */,
+				5557D36D289504020077EEE1 /* TimeDurationHelper.swift in Sources */,
 				5580176C28938EF2003D29F2 /* SearchView.swift in Sources */,
 				5580176E28938F31003D29F2 /* MusicView.swift in Sources */,
 				5580177628939243003D29F2 /* DataHandler.swift in Sources */,

@@ -13,27 +13,49 @@ struct Player: View {
     @State var music: Music?
     @State private var musicValue = 0.0;
     @State private var duration = 0.0
+    @State private var sliderIsEditing = false
+    @State var parent = "SearchView"
     
     let timer = Timer
         .publish(every: 0.5, on: .main, in: .common)
         .autoconnect()
     var body: some View {
         VStack {
-            if music != nil {
-                Slider(value: $musicValue, in: 0...duration) { editing in
-                        if !editing {
-                            data.audioPlayer.currentTime = musicValue
-                        }
-                    
+            if music != nil && data.audioPlayer != nil {
+                VStack {
+                    Slider(value: $musicValue, in: 0...duration) { editing in
+                            sliderIsEditing = editing
+                            if !editing {
+                                data.audioPlayer.currentTime = musicValue
+                            }
+                        
+                    }
+                    .accentColor(.white)
+                    HStack {
+                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer.currentTime) ?? "0:00")
+                        Spacer()
+                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer.duration) ?? "0:00")
+                    }
+                    .foregroundColor(.white)
                 }
-                .accentColor(.white)
+
             }
 
 
             HStack {
-                data.selectedMusic?.image
-                    .resizable()
-                    .frame(width: 50, height: 50)
+                if data.selectedMusic != nil {
+                    
+                    NavigationLink(destination: MusicView(music: data.selectedMusic!)){
+                        data.selectedMusic?.image
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                    }
+                    .disabled(parent == "SearchView" ? false : true)
+                }
+
+
+                    
+                
                 VStack(alignment: .leading) {
                     data.selectedMusic == nil ?
                     Text("No playing")
@@ -72,9 +94,15 @@ struct Player: View {
         .padding()
         .background(Color("MyDark"))
         .onReceive(timer) { _ in
-            guard let player = data.audioPlayer else { return }
+            guard let player = data.audioPlayer, !sliderIsEditing else { return }
             musicValue = player.currentTime
             duration = player.duration
+        }
+        .onAppear {
+            if data.audioPlayer != nil {
+                musicValue = data.audioPlayer.currentTime;
+                duration = data.audioPlayer.duration;
+            }
         }
 
     }
