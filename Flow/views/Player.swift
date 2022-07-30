@@ -26,17 +26,16 @@ struct Player: View {
                     Slider(value: $musicValue, in: 0...duration) { editing in
                             sliderIsEditing = editing
                             if !editing {
-                                data.audioPlayer.currentTime = musicValue
+                                data.audioPlayer?.currentTime = musicValue
                             }
                         
                     }
-                    .accentColor(.white)
+                    .accentColor(.gray)
                     HStack {
-                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer.currentTime) ?? "0:00")
+                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer?.currentTime ?? 0.0) ?? "0:00")
                         Spacer()
-                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer.duration) ?? "0:00")
+                        Text(DateComponentsFormatter.positional.string(from: data.audioPlayer?.duration ?? 0.0) ?? "0:00")
                     }
-                    .foregroundColor(.white)
                 }
 
             }
@@ -50,7 +49,7 @@ struct Player: View {
                             .resizable()
                             .frame(width: 50, height: 50)
                     }
-                    .disabled(parent == "SearchView" ? false : true)
+                    .disabled(parent == "MusicView" ? true : false)
                 }
 
 
@@ -59,11 +58,10 @@ struct Player: View {
                 VStack(alignment: .leading) {
                     data.selectedMusic == nil ?
                     Text("No playing")
-                        .font(.title)
-                        .foregroundColor(.white) : (
+                        .font(.title) : (
                             Text("\(data.selectedMusic!.title)")
                         .font(.title)
-                        .foregroundColor(.white)
+            
                     )
                 }.padding(.leading, 2)
                 Spacer()
@@ -92,7 +90,6 @@ struct Player: View {
             }
         }
         .padding()
-        .background(Color("MyDark"))
         .onReceive(timer) { _ in
             guard let player = data.audioPlayer, !sliderIsEditing else { return }
             musicValue = player.currentTime
@@ -100,8 +97,8 @@ struct Player: View {
         }
         .onAppear {
             if data.audioPlayer != nil {
-                musicValue = data.audioPlayer.currentTime;
-                duration = data.audioPlayer.duration;
+                musicValue = data.audioPlayer?.currentTime ?? 0.0;
+                duration = data.audioPlayer?.duration ?? 0.0;
             }
         }
 

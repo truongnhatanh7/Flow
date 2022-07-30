@@ -9,10 +9,19 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        VStack {
-            
+        VStack(alignment: .leading) {
+            Text("Flow, created by Anh Truong")
+                .font(.title)
+            Text("Our office")
+                .font(.title)
+                .padding(.top, 8)
+            Spacer()
+            MapView(coordinate: IdentifiablePlace(lat: 10.729693487476302, long: 106.69306486904455))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
         }
-        
+        .padding()
+        .navigationBarTitle("About")
+
     }
        
 }

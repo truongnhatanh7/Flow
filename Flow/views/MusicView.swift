@@ -31,15 +31,14 @@ struct MusicView: View {
                 
         }
         .onAppear {
-//            data.selectedMusic = music;
             if music != data.selectedMusic{
                 let sound = Bundle.main.path(forResource: "\(music.fileName)", ofType: "mp3")
                 data.audioPlayer =  try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                data.audioPlayer.play();
+                data.audioPlayer?.play();
             }
 
         }
-        .navigationTitle("Listen")
+        .navigationBarTitle("Listen")
     }
 
         

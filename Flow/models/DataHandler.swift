@@ -11,7 +11,7 @@ import AVKit
 
 final class DataHandler: ObservableObject {
     @Published var musics: [Music] = load("data.json")
-    @Published var audioPlayer: AVAudioPlayer!
+    @Published var audioPlayer: AVAudioPlayer?
     @Published var selectedMusic: Music?
 }
 

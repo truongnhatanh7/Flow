@@ -26,11 +26,11 @@ struct SearchView: View {
                 .listRowSeparator(.hidden)
             }
             .searchable(text: $searchText)
-            .navigationTitle("Search")
-        
+            
             Spacer()
             Player(parent: "SearchView")
         }
+        .navigationBarTitle("Search")
        
 
 
