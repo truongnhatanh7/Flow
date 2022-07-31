@@ -26,6 +26,7 @@ struct SearchView: View {
                 .listRowSeparator(.hidden)
             }
             .searchable(text: $searchText)
+        
             
             Spacer()
             Player(parent: "SearchView")
