@@ -5,9 +5,9 @@
   Assessment: Assignment 1
   Author: Truong Nhat Anh
   ID: s3878231
-  Created  date: 15/7/2022
-  Last modified: 17/7/2022
-  Acknowledgement: www.hackingwithswift.com, COSC2659 Lecture slides, Stackoverflow
+  Created  date: 30/07/2022
+  Last modified: 31/07/2022
+  Acknowledgement: Apple SwiftUI Documentation, RMIT Lecture slides, StackOverflow
 */
 
 import Foundation
