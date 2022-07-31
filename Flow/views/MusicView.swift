@@ -11,8 +11,6 @@ import AVKit
 struct MusicView: View {
     @State var music: Music
     @EnvironmentObject var data: DataHandler
-    @State private var isRotated = true
-    @State private var rotation = 0.0
 
     var body: some View {
         VStack {

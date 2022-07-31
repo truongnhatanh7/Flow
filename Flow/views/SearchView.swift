@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct SearchView: View {
     @State private var searchText = ""
     @EnvironmentObject var data: DataHandler
+    
     var body: some View {
         VStack {
             List {
@@ -32,10 +34,8 @@ struct SearchView: View {
             Player(parent: "SearchView")
         }
         .navigationBarTitle("Search")
+
        
-
-
-
     }
     
     var searchResults: [Music] {
@@ -47,6 +47,8 @@ struct SearchView: View {
             }
         }
     }
+    
+    
 }
 
 struct SearchView_Previews: PreviewProvider {

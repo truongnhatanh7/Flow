@@ -19,6 +19,7 @@ struct Player: View {
     let timer = Timer
         .publish(every: 0.5, on: .main, in: .common)
         .autoconnect()
+    
     var body: some View {
         VStack {
             if music != nil && data.audioPlayer != nil {
@@ -43,7 +44,6 @@ struct Player: View {
 
             HStack {
                 if data.selectedMusic != nil {
-                    
                     NavigationLink(destination: MusicView(music: data.selectedMusic!)){
                         data.selectedMusic?.image
                             .resizable()

@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
     @EnvironmentObject var data: DataHandler
+
     var body: some View {
 
             TabView {
@@ -33,6 +35,16 @@ struct ContentView: View {
             }
             .background(Color("MyDark"))
             .environmentObject(data)
+            .onLoad {
+                // Set up background audio
+                do {
+                    let session = AVAudioSession.sharedInstance()
+                    try session.setActive(true)
+                    try session.setCategory(.playback, mode: .default,  options: .defaultToSpeaker)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
     }
 }
 
