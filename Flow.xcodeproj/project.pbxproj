@@ -33,6 +33,7 @@
 		5580178B2894385D003D29F2 /* cardib_drip.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5580178A2894385D003D29F2 /* cardib_drip.jpeg */; };
 		5580178D289438B9003D29F2 /* dababy_rockstar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5580178C289438B9003D29F2 /* dababy_rockstar.mp3 */; };
 		5580178F289438E6003D29F2 /* dababy_rockstar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5580178E289438E6003D29F2 /* dababy_rockstar.jpeg */; };
+		55889DBB28980C4100927463 /* document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55889DBA28980C4100927463 /* document.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		5580178A2894385D003D29F2 /* cardib_drip.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardib_drip.jpeg; sourceTree = "<group>"; };
 		5580178C289438B9003D29F2 /* dababy_rockstar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dababy_rockstar.mp3; sourceTree = "<group>"; };
 		5580178E289438E6003D29F2 /* dababy_rockstar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dababy_rockstar.jpeg; sourceTree = "<group>"; };
+		55889DBA28980C4100927463 /* document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = document.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				5580175E28938D07003D29F2 /* Assets.xcassets */,
 				5580176028938D07003D29F2 /* Preview Content */,
 				558017772893929C003D29F2 /* data.json */,
+				55889DBA28980C4100927463 /* document.pdf */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				5580177A2893943B003D29F2 /* logic_keanu_reeves.mp3 in Resources */,
 				558017892894384E003D29F2 /* cardib_drip.mp3 in Resources */,
 				5580177E289395B6003D29F2 /* logic_keanu_reeves.jpeg in Resources */,
+				55889DBB28980C4100927463 /* document.pdf in Resources */,
 				558017872894371D003D29F2 /* mcgoku_flashback.jpeg in Resources */,
 				558017822893ADA7003D29F2 /* postmalone_white_iverson.png in Resources */,
 			);
