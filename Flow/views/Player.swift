@@ -27,6 +27,7 @@ struct Player: View {
     
     var body: some View {
         VStack {
+            // Slider section
             if music != nil && data.audioPlayer != nil {
                 VStack {
                     Slider(value: $musicValue, in: 0...duration) { editing in
@@ -37,6 +38,7 @@ struct Player: View {
                         
                     }
                     .accentColor(.gray)
+                    // Time indicator section
                     HStack {
                         Text(DateComponentsFormatter.positional.string(from: data.audioPlayer?.currentTime ?? 0.0) ?? "0:00")
                         Spacer()
@@ -48,6 +50,7 @@ struct Player: View {
 
 
             HStack {
+                // Image section
                 if data.selectedMusic != nil {
                     NavigationLink(destination: MusicView(music: data.selectedMusic!)){
                         data.selectedMusic?.image
@@ -56,10 +59,7 @@ struct Player: View {
                     }
                     .disabled(parent == "MusicView" ? true : false)
                 }
-
-
-                    
-                
+   
                 VStack(alignment: .leading) {
                     data.selectedMusic == nil ?
                     Text("No playing")
@@ -70,6 +70,7 @@ struct Player: View {
                     )
                 }.padding(.leading, 2)
                 Spacer()
+                // Control buttons
                 Button {
                     data.audioPlayer?.play()
                 } label: {
@@ -96,11 +97,13 @@ struct Player: View {
         }
         .padding()
         .onReceive(timer) { _ in
+            // Prevent glitchy slider + update time
             guard let player = data.audioPlayer, !sliderIsEditing else { return }
             musicValue = player.currentTime
             duration = player.duration
         }
         .onAppear {
+            // Set time indicator
             if data.audioPlayer != nil {
                 musicValue = data.audioPlayer?.currentTime ?? 0.0;
                 duration = data.audioPlayer?.duration ?? 0.0;

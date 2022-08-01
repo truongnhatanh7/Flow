@@ -20,11 +20,11 @@ struct ContentView: View {
 
             TabView {
                 NavigationView {
-                    SearchView()
+                    PlayView()
                 }
                         .tabItem {
-                            Image(systemName: "magnifyingglass")
-                            Text("Search")
+                            Image(systemName: "play")
+                            Text("Play")
                         }
                         .navigationViewStyle(.stack)
                 NavigationView {

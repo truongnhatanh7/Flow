@@ -13,7 +13,7 @@
 import SwiftUI
 
 
-struct SearchView: View {
+struct PlayView: View {
     @State private var searchText = ""
     @EnvironmentObject var data: DataHandler
     
@@ -26,38 +26,33 @@ struct SearchView: View {
                     } label: {
                         MusicRow(music: music);
                     }
-                    .onDisappear {
-                        data.selectedMusic = music
-                    }
                 }
                 .listRowSeparator(.hidden)
             }
             .searchable(text: $searchText)
-        
             
             Spacer()
-            Player(parent: "SearchView")
+            Player(parent: "PlayView")
         }
-        .navigationBarTitle("Search")
-
-       
+        .navigationBarTitle("Play")
     }
     
     var searchResults: [Music] {
-        if searchText.isEmpty {
-            return data.musics;
+        if (searchText == "") {
+            return data.musics
         } else {
             return data.musics.filter { music in
                 return music.title.contains(searchText)
             }
         }
     }
+
     
     
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        PlayView()
     }
 }
