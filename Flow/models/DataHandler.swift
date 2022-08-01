@@ -1,14 +1,14 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 1
-  Author: Truong Nhat Anh
-  ID: s3878231
-  Created  date: 30/07/2022
-  Last modified: 31/07/2022
-  Acknowledgement: Apple SwiftUI Documentation, RMIT Lecture slides, StackOverflow
-*/
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 1
+ Author: Truong Nhat Anh
+ ID: s3878231
+ Created  date: 30/07/2022
+ Last modified: 31/07/2022
+ Acknowledgement: Apple SwiftUI Documentation, RMIT Lecture slides, StackOverflow
+ */
 
 import Foundation
 import Combine
@@ -18,8 +18,10 @@ final class DataHandler: ObservableObject {
     @Published var musics: [Music] = load("data.json")
     @Published var audioPlayer: AVAudioPlayer?
     @Published var selectedMusic: Music?
+    @Published var prevMusic: Music?
 }
 
+// For loading JSON data
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
